@@ -5,10 +5,18 @@
     padding: 0;
 }
 :root{
+    --logo-font: "That's Font Folks Italic", serif;
     --main-font: 'Montserrat', sans-serif;
     --main-color: rgb(253, 209, 53);
     --h-color: rgb(33, 33, 33);
+    --p-font: 'Roboto Slab', serif;
+    --p-color: #777777
 }
+@font-face {
+    font-family: "That's Font Folks Italic";
+    src: url("./fonts/That__s-Font-Folks_.woff") format("woff");
+}
+   
 html {
     box-sizing: border-box;
     font-size: 0;
@@ -17,14 +25,6 @@ img{
     display: block;
     max-width:100%;
     height: auto;
-}
-.clearfix {
-    overflow: auto;
-}
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 .container{
     width: 940px;
@@ -48,9 +48,10 @@ img{
     font-size: 30px;
     display: inline-block;
     color: var(--main-color);
-    font-weight: 700;
+    font-weight: 500;
     text-transform: capitalize;
     display: inline-block;
+    font-family: var(--logo-font);
 }
 .main-menu a{
     text-transform: uppercase;
@@ -64,4 +65,144 @@ img{
 .main-menu a:hover ,
 .main-menu a:active {
     color: var(--main-color);
+}
+h2{
+    font-size: 40px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 8px;
+    display: block;
+}
+.service{
+    padding-top: 120px;
+    padding-bottom: 100px;
+
+}
+.services-title{
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 6px;
+    color: var(--p-color);
+}
+.service-item {
+    width: 290px;
+}
+.service-box{
+    padding-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    min-height: 180px;
+    text-align: center;
+}
+.service-item::before {
+    display: block;
+    content: "";
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 26px;
+    border: 2px solid var(--main-color);
+}
+.service-item-text h3 {
+    font-family: var(--main-font);
+    font-size: 18px;
+    color: var(--h-color);
+    text-transform: uppercase;
+}
+.service-item-text p {
+    font-family: var(--p-font);
+    font-size: 14px;
+    color: var(--p-color);
+    line-height: 1.5;
+    padding-top: 8px;
+}
+.service-item:first-child::before{
+    background-image: url(./img/basket.png);
+}
+.service-item:nth-child(2)::before{
+    background-image: url(./img/laptop.png);
+}
+.service-item:last-child::before{
+    background-image: url(./img/locked.png);
+}
+.contact-us{
+    padding-bottom: 70px;
+    background-image: url(./img/map.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.contact-us-title{
+    padding-top: 110px;
+    color: white;
+    font-family: var(--main-font);
+}
+.contact-us-titles{
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 6px;
+    color: var(--p-color);
+}
+form {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+    
+}
+form .contact-us-form-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+form input[type=text], textarea{
+    text-transform: uppercase;
+    padding-left: 16px;
+    font-size: 14px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    width: 454px;
+    box-sizing: border-box;
+}
+
+.contact-us-form-list input[type=text]{
+    height: 52px;
+    margin: auto 0;
+}
+textarea {
+    width: 454px;
+    height: 212px;
+    background-color: #fff;
+    padding-top: 16px;
+}
+form button{
+    display: block;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    width: 240px;
+    height: 56px;
+    margin: 30px auto;
+    align-self: center;
+    font-size: 18px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    border-radius: 5px;
+    text-transform: uppercase;
 }
