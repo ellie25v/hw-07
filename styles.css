@@ -269,6 +269,17 @@ textarea::placeholder {
     font-size: 14px;
     text-transform: uppercase;
 }
+.contact-us-form input[type=text]:required:focus{
+    outline: none;
+}
+.contact-us-form input[type=text]:required:focus:valid ,
+textarea:focus:valid {
+    box-shadow: 0 0 0 2px green;
+}
+.contact-us-form input[type=text]:focus:invalid ,
+textarea:focus:invalid {
+    box-shadow: 0 0 0 2px red;
+}
 form button {
     display: block;
     border: none;
