@@ -282,11 +282,13 @@ textarea::placeholder {
 .contact-us-form input[type=text]:required:focus{
     outline: none;
 }
-.contact-us-form input[type=text]:required:focus:valid ,
+.contact-us-form input[type=text]:required:focus:valid , 
+.contact-us-form input[type=email]:required:focus:valid , 
 textarea:focus:valid {
     box-shadow: 0 0 0 2px green;
 }
-.contact-us-form input[type=text]:focus:invalid ,
+.contact-us-form input[type=text]:focus:invalid , 
+.contact-us-form input[type=email]:focus:invalid , 
 textarea:focus:invalid {
     box-shadow: 0 0 0 2px red;
 }
