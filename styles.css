@@ -215,9 +215,11 @@ h2 {
 
 .contact-us {
     padding-bottom: 70px;
+    background-color: #222222;
     background-image: url(./img/map.png);
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
+    background-position: bottom right;
 
 }
 
@@ -253,6 +255,7 @@ form .contact-us-form-list {
 }
 
 form input[type=text],
+form input[type=email] ,
 textarea {
     padding-left: 16px;
     font-family: var(--main-font);
@@ -263,7 +266,8 @@ textarea {
     box-sizing: border-box;
 }
 
-.contact-us-form-list input[type=text] {
+.contact-us-form-list input[type=text] ,
+form input[type=email] {
     height: 52px;
     margin: auto 0;
 }
@@ -279,7 +283,8 @@ textarea::placeholder {
     font-size: 14px;
     text-transform: uppercase;
 }
-.contact-us-form input[type=text]:required:focus{
+.contact-us-form input[type=text]:required:focus ,
+form input[type=email]:required:focus{
     outline: none;
 }
 .contact-us-form input[type=text]:required:focus:valid , 
